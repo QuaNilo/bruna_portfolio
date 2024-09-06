@@ -1410,6 +1410,7 @@ video {
 .inline{
   display: inline !important;
 }
+
 .flex{
   display: -webkit-box !important;
   display: -ms-flexbox !important;
