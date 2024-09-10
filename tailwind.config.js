@@ -33,9 +33,12 @@ module.exports = {
         },
         extend: {
             colors: {
+                gray: colors.gray,
+                slate: colors.slate,
                 'dark': '#3c4858',
                 'black': '#161c2d',
                 'dark-footer': '#192132',
+                'test': '#111000'
             },
 
             boxShadow: {
