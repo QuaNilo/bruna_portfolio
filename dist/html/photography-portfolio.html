@@ -21,6 +21,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
         <link href="../assets/libs/@iconscout/unicons/css/line.css" type="text/css" rel="stylesheet">
         <link href="../assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="../assets/css/tailwind.css">
@@ -45,22 +46,10 @@
             <div class="absolute inset-0 h-full w-full bg-gradient-to-t to-transparent via-white/10 dark:via-slate-900/80 from-white dark:from-slate-900"></div>
 
             <div class="absolute text-center p-6 bottom-0 start-0 end-0">
-                <h3 class="md:text-3xl md:leading-normal text-2xl leading-normal font-bold">Portfolio</h3>
+                <h3 class="md:text-3xl md:leading-normal text-2xl leading-normal font-bold">Galeria</h3>
             </div>
         </section><!--end section-->
-        <div class="flex justify-center mt-12 mb-10">
-            <div class="flex flex-col items-center justify-center ">
-                <p style="font-family: 'Roboto Slab', serif;" class="text-lg font-extrabold">
-                    "Não consigo por palavras demonstrar o quanto gostei das fotos, muito obrigada.
-                </p>
-                <p style="font-family: 'Roboto Slab', serif;" class="text-lg font-extrabold">
-                    Ficou um registo lindo. Sem dúvida tens um dom. Mais uma vez obrigado."
-                </p>
-                <p style="font-family: 'Roboto Slab', serif;" class="p-2 font-normal text-md">
-                    Dina & Pedro
-                </p>
-            </div>
-        </div>
+
         <!-- End Home -->
         <!-- Start Section-->
         <section id="portfolio-section" class="relative md:py-12 py-4 hidden">
@@ -632,6 +621,56 @@
                 </div><!--end grid-->
             </div><!--end container-->
         </section><!--end section-->
+
+        <div class="overflow-hidden">
+            <div class="flex transition-transform duration-500 ease-in-out carousel-slide">
+              <div class="min-w-full h-48 flex items-center justify-center text-black text-2xl border-r-2 border-white">
+                <div class="flex justify-center mt-12 mb-10">
+                    <div class="flex flex-col items-center justify-center ">
+                        <p style="font-family: 'Roboto Slab', serif;" class="text-lg font-extrabold">
+                            "Não consigo por palavras demonstrar o quanto gostei das fotos, muito obrigada.
+                        </p>
+                        <p style="font-family: 'Roboto Slab', serif;" class="text-lg font-extrabold">
+                            Ficou um registo lindo. Sem dúvida tens um dom. Mais uma vez obrigado."
+                        </p>
+                        <p style="font-family: 'Roboto Slab', serif;" class="p-2 font-normal text-md">
+                            Dina & Pedro
+                        </p>
+                    </div>
+                </div>
+              </div>
+              <div class="min-w-full h-48 flex items-center justify-center text-black text-2xl border-r-2 border-white">
+                <div class="flex justify-center mt-12 mb-10">
+                    <div class="flex flex-col items-center justify-center ">
+                        <p style="font-family: 'Roboto Slab', serif;" class="text-lg font-extrabold">
+                            "Não consigo por palavras demonstrar o quanto gostei das fotos, muito obrigada.
+                        </p>
+                        <p style="font-family: 'Roboto Slab', serif;" class="text-lg font-extrabold">
+                            Ficou um registo lindo. Sem dúvida tens um dom. Mais uma vez obrigado."
+                        </p>
+                        <p style="font-family: 'Roboto Slab', serif;" class="p-2 font-normal text-md">
+                            Dina & Pedro
+                        </p>
+                    </div>
+                </div>
+              </div>
+              <div class="min-w-full h-48 flex items-center justify-center text-black text-2xl border-r-2 border-white">
+                <div class="flex justify-center mt-12 mb-10">
+                    <div class="flex flex-col items-center justify-center ">
+                        <p style="font-family: 'Roboto Slab', serif;" class="text-lg font-extrabold">
+                            "Não consigo por palavras demonstrar o quanto gostei das fotos, muito obrigada.
+                        </p>
+                        <p style="font-family: 'Roboto Slab', serif;" class="text-lg font-extrabold">
+                            Ficou um registo lindo. Sem dúvida tens um dom. Mais uma vez obrigado."
+                        </p>
+                        <p style="font-family: 'Roboto Slab', serif;" class="p-2 font-normal text-md">
+                            Dina & Pedro
+                        </p>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
         
         <div id="footer"></div>
 
@@ -659,6 +698,24 @@
         <script src="../assets/libs/feather-icons/feather.min.js"></script>
         <script src="../assets/js/plugins.init.js"></script>
         <script src="../assets/js/app.js"></script>
+        <script>
+            const carouselSlide = document.querySelector('.carousel-slide');
+            const carouselItems = document.querySelectorAll('.carousel-slide > div');
+
+            let counter = 0;
+            const size = carouselItems[0].clientWidth;
+
+            function slideCarousel() {
+            counter++;
+            if (counter >= carouselItems.length) {
+                counter = 0;
+            }
+            carouselSlide.style.transform = `translateX(${-size * counter + 1}px)`;
+            }
+
+            // Slide every 5 seconds
+            setInterval(slideCarousel, 6000);
+        </script>
         <script>
             fetch('navbar.html')
             .then(response => response.text())

@@ -17,6 +17,7 @@ module.exports = {
         fontFamily: {
             'nunito': ['"Nunito", sans-serif'],
             'roboto-slab': ['"Roboto Slab"', 'serif'],
+            'oswald': ['"Oswald"', 'sans-serif'],
             'cursive-alex': ['"Alex Brush", cursive'],
             'cursive-kaushan': ['"Kaushan Script", cursive'],
             'head-ebgaramond': ['"EB Garamond", serif'],
