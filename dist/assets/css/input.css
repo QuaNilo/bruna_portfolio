@@ -4339,6 +4339,45 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
   border-width: 0px;
   padding: 0px;
 }
+
+/* Position the SVG icon in the top right corner */
+#menu-icon {
+  position: absolute;
+  top: 20px; /* Adjust this to your preferred distance from the top */
+  right: 20px; /* Adjust this to your preferred distance from the right */
+  z-index: 10; /* Ensure it's above the mobile menu */
+}
+
+/* General styling for the mobile menu */
+#mobile-menu {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Add background-color transition */
+  background-color: white;
+  z-index: 9; /* Set a lower z-index than the menu-icon to avoid covering it */
+}
+
+/* When the mobile menu is active (visible) */
+#mobile-menu.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Navigation Menu Styling */
+#mobile-menu ul li a {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#mobile-menu.active ul li a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 #topnav .navbar-toggle .lines{
   position: relative;
   margin-top: 30px;
@@ -4351,18 +4390,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
   height: 18px;
   width: 25px;
 }
-#topnav .navbar-toggle span {
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-  margin-bottom: 5px;
-  display: block;
-  height: 2px;
-  width: 100%;
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 28 45 / var(--tw-bg-opacity));
-}
+
 :is(.dark #topnav .navbar-toggle span){
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));

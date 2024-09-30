@@ -35,12 +35,12 @@
 
 
         <!-- Start Home -->
-        <section class="relative md:py-56 py-44 bg-cover jarallax"  style="background-image: url('./../assets/images/como_funciona/capa_f.jpg');" data-jarallax data-speed="0.5" id="aboutme">
+        <section class="relative h-screen md:h-fit md:py-56 py-44 bg-cover jarallax"  style="background-image: url('./../assets/images/como_funciona/capa_f.jpg');" data-jarallax data-speed="0.5" id="aboutme">
             <div class="absolute inset-0 h-full w-full bg-gradient-to-t to-transparent via-white/10 dark:via-slate-900/80 from-white dark:from-slate-900"></div>
 
             <div class="absolute text-center p-6 bottom-0 start-0 end-0">
-                <h3 style="font-family: 'PT Sans', sans-serif;" class="md:text-3xl md:leading-normal text-2xl leading-normal font-bold">CONTACTO</h3>
-                <h6 style="font-family: 'Antic Slab', serif;" class="md:text-xl md:leading-normal leading-normal font-bold">VAMOS ESCLARECER COMO AS COISAS FUNCIONAM</h6>
+                <h3 style="font-family: 'PT Sans', sans-serif;" class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-bold">CONTACTO</h3>
+                <p style="font-family: 'Antic Slab', serif;" class="text-lg font-semibold text-black max-w-2xl mx-auto">VAMOS ESCLARECER COMO AS COISAS FUNCIONAM</p>
             </div>
         </section><!--end section-->
         <!-- End Home -->
@@ -50,10 +50,10 @@
             <div class="container text-center">
             <!-- Buttons -->
             <div class="button-group space-x-3 mb-6">
-                <button class="btn bg-blue-500 text-slate-800 px-4 py-2 text-sm dark:text-white" data-group="contacto">1. CONTACTO</button>
-                <button class="btn bg-blue-500 text-slate-800 px-4 py-2 text-sm dark:text-white" data-group="reuniao">2. REUNIÃO</button>
-                <button class="btn bg-blue-500 text-slate-800 px-4 py-2 text-sm dark:text-white" data-group="o_grande_dia">3. O GRANDE DIA!</button>
-                <button class="btn bg-blue-500 text-slate-800 px-4 py-2 text-sm dark:text-white" data-group="entrega">4. ENTREGA</button>
+                <button class="btn bg-blue-500 text-slate-800 md:px-4 py-2 text-xs md:text-lg dark:text-white" data-group="contacto">1. CONTACTO</button>
+                <button class="btn bg-blue-500 text-slate-800 md:px-4 py-2 text-xs md:text-lg dark:text-white" data-group="reuniao">2. REUNIÃO</button>
+                <button class="btn bg-blue-500 text-slate-800 md:px-4 py-2 text-xs md:text-lg dark:text-white" data-group="o_grande_dia">3. O GRANDE DIA!</button>
+                <button class="btn bg-blue-500 text-slate-800 md:px-4 py-2 text-xs md:text-lg dark:text-white" data-group="entrega">4. ENTREGA</button>
             </div>
         
             <!-- Content Divs -->
@@ -137,6 +137,13 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navbar').innerHTML = data;
+                const menuIcon = document.getElementById('menu-icon');
+                const mobileMenu = document.getElementById('mobile-menu');
+                console.log(menuIcon)
+                // Toggle mobile menu visibility
+                menuIcon.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
             })
             .catch(error => {
                 console.error('Error loading navbar:', error);

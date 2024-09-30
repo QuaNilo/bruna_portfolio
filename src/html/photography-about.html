@@ -44,12 +44,12 @@
 
 
         <!-- Start Home -->
-        <section class="relative md:py-56 py-44 bg-cover jarallax" style="background: url('./../assets/images/home/4.jpg') top;" data-jarallax data-speed="0.5" id="aboutme">
+        <section class="relative h-screen md:py-56 py-44 bg-cover jarallax" style="background: url('./../assets/images/home/4.jpg') top;" data-jarallax data-speed="0.5" id="aboutme">
             <div class="absolute inset-0 h-full w-full bg-gradient-to-t to-transparent via-white/10 dark:via-slate-900/80 from-white dark:from-slate-900"></div>
 
             <div class="absolute text-center p-6 bottom-0 start-0 end-0">
-                <h3 style="font-family: 'PT Sans', sans-serif;" class="md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">SOBRE MIM</h3>
-                <h5 style="font-family: 'Antic Slab', serif;" class="text-slate-900 dark:text-white/70  text-xl font-semibold">ATRÁS DA CÂMARA</h5>
+                <h3 style="font-family: 'PT Sans', sans-serif;" class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-bold">SOBRE MIM</h3>
+                <p style="font-family: 'Antic Slab', serif;" class="text-lg font-semibold text-black max-w-2xl mx-auto">ATRÁS DA CÂMARA</p>
             </div>
         </section><!--end section-->
         <!-- End Home -->
@@ -67,8 +67,7 @@
             <div class="container relative">
                 
                 <div class="grid grid-cols-1">
-                    
-                    <div class="rounded-md shadow-md dark:shadow-gray-800 shadow-gray-800 overflow-hidden">
+                    <div class="rounded-md shadow-lg dark:shadow-gray-800 shadow-gray-800 overflow-hidden">
                         <div class="md:flex items-center">
                             <div class="relative md:shrink-0">
                                 <img src="../assets/images/sobre_mim/1.jpg" class="h-full w-full object-cover lg:w-[500px] md:w-80 lg:h-full md:h-96" alt="">
@@ -91,10 +90,10 @@
                             </div>
                         </div><!--end flex-->
                     </div>
-                    <div class="mt-8 rounded-md shadow-md dark:shadow-gray-800 shadow-gray-800 overflow-hidden"></div>
+                    <div class="mt-8 rounded-md shadow-lg dark:shadow-gray-800 shadow-gray-800 overflow-hidden">
                         <div class="md:flex items-center">
                             <div class="relative md:shrink-0">
-                                <img src="../assets/images/sobre_mim/texto.jpg" class="h-full w-full object-cover lg:w-[500px] md:w-80 lg:h-full md:h-96" alt="">
+                                <img src="../assets/images/sobre_mim/2.2.jpg" class="h-auto w-full object-cover lg:w-[500px] md:w-80" alt="">
                             </div>
 
                             <div class="p-8">
@@ -110,7 +109,9 @@
                                 <!-- <a style="font-family: 'Antic Slab', serif;" href="photography-booking.html" class="relative inline-block font-semibold tracking-wide align-middle text-base text-center border-none after:content-[''] after:absolute after:h-px after:w-0 hover:after:w-full after:end-0 hover:after:end-auto after:bottom-0 after:start-0 after:duration-500 text-slate-400 dark:text-white/70 dark:hover:text-white hover:text-indigo-600 after:bg-indigo-600 dark:after:bg-white duration-500 ease-in-out mt-6">Marca já <i class="uil uil-arrow-right"></i></a> -->
                             </div>
                         </div><!--end flex-->
+
                     </div>
+                </div>
                 </div><!--end grid-->
             </div><!--end container-->
 
@@ -146,6 +147,13 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navbar').innerHTML = data;
+                const menuIcon = document.getElementById('menu-icon');
+                const mobileMenu = document.getElementById('mobile-menu');
+                console.log(menuIcon)
+                // Toggle mobile menu visibility
+                menuIcon.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
             })
             .catch(error => {
                 console.error('Error loading navbar:', error);

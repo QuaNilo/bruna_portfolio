@@ -11,31 +11,33 @@
                     <img src="../assets/images/logo/Logo_BrunaSirgado_Branco.png" class="hidden dark:inline-block w-44 h-fit" alt="">
                 </a>
 
-                <!-- End Logo container-->
-                <div class="menu-extras">
-                    <div class="menu-item">
-                        <!-- Mobile menu toggle-->
-                        <a class="navbar-toggle" id="isToggle" onclick="toggleMenu()">
-                            <div class="lines">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </a>
-                        <!-- End mobile menu toggle-->
+
+                <div id="header-navigation" class="flex justify-end">
+                    <!-- Hamburger Icon for Mobile -->
+                    <div id="menu-icon" class="block md:hidden cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </div>
+                
+                    <!-- Navigation Menu -->
+                    <ul id="navigation-menu" class="hidden md:flex navigation-menu nav-light justify-end">
+                        <li><a href="index.html" class="sub-menu-item text-white opacity-100">Home</a></li>
+                        <li><a href="photography-about.html" class="sub-menu-item text-white opacity-100">Sobre Mim</a></li>
+                        <li><a href="photography-portfolio.html" class="sub-menu-item text-white opacity-100">Galeria</a></li>
+                        <li><a href="photography-booking.html" class="sub-menu-item text-white opacity-100">Contacto</a></li>
+                    </ul>
+                
+                    <!-- Mobile Menu Overlay -->
+                    <div id="mobile-menu" class="hidden fixed inset-0 bg-white flex items-center justify-center">
+                        <ul class="text-center space-y-8">
+                            <li><a href="index.html" class="sub-menu-item text-black text-3xl">Home</a></li>
+                            <li><a href="photography-about.html" class="sub-menu-item text-black text-3xl">Sobre Mim</a></li>
+                            <li><a href="photography-portfolio.html" class="sub-menu-item text-black text-3xl">Galeria</a></li>
+                            <li><a href="photography-booking.html" class="sub-menu-item text-black text-3xl">Contacto</a></li>
+                        </ul>
                     </div>
                 </div>
-
-
-                <div id="navigation flex justify-end">
-                    <!-- Navigation Menu-->   
-                    <ul class="navigation-menu nav-light justify-end">
-                        <li><a href="index.html" class="sub-menu-item">Home</a></li>
-                        <li><a href="photography-about.html" class="sub-menu-item">Sobre Mim</a></li>
-                        <li><a href="photography-portfolio.html" class="sub-menu-item">Galeria</a></li>
-                        <li><a href="photography-booking.html" class="sub-menu-item">Contacto</a></li>
-                    </ul><!--end navigation menu-->
-                </div><!--end navigation-->
             </div><!--end container-->
         </nav><!--end header-->
-        <!-- End Navbar -->
+        <!-- End Navbar --

@@ -50,9 +50,9 @@ function toggleMenu() {
     document.getElementById('isToggle').classList.toggle('open');
     var isOpen = document.getElementById('navigation')
     if (isOpen.style.display === "block") {
-        isOpen.style.display = "none";
-    } else {
         isOpen.style.display = "block";
+    } else {
+        isOpen.style.display = "none";
     }
 };
 /*********************/
@@ -147,6 +147,18 @@ if (document.getElementById("navigation")) {
         }
     }
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuIcon = document.getElementById('menu-icon');
+    const mobileMenu = document.getElementById('mobile-menu');
+    console.log(menuIcon)
+    // Toggle mobile menu visibility
+    menuIcon.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+});
+
 /*********************/
 /*   Menu Sticky     */
 /*********************/
