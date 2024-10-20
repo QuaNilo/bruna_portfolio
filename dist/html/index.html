@@ -123,9 +123,11 @@
                     const mobileMenu = document.getElementById('mobile-menu');
 
                     // Toggle mobile menu visibility
+                    if(menuIcon){
                     menuIcon.addEventListener('click', () => {
                         mobileMenu.classList.toggle('hidden');
                     });
+                }
                 })
                 .catch(error => {
                     console.error('Error loading navbar:', error);

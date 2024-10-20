@@ -631,12 +631,10 @@ try {
          */
         addShuffleEventListeners() {
             this.shuffle.on(Shuffle.EventType.LAYOUT, (data) => {
-                console.log('layout. data:', data);
                 var grid = document.getElementById("portfolio-section");
                 grid.classList.remove('hidden')
             });
             this.shuffle.on(Shuffle.EventType.REMOVED, (data) => {
-                console.log('removed. data:', data);
             });
         }
 

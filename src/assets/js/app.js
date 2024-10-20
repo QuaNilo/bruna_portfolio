@@ -152,11 +152,13 @@ if (document.getElementById("navigation")) {
 document.addEventListener('DOMContentLoaded', function () {
     const menuIcon = document.getElementById('menu-icon');
     const mobileMenu = document.getElementById('mobile-menu');
-    console.log(menuIcon)
-    // Toggle mobile menu visibility
-    menuIcon.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
+    if(menuIcon){
+        console.log(menuIcon)
+        // Toggle mobile menu visibility
+        menuIcon.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
 });
 
 /*********************/
