@@ -39,10 +39,18 @@ module.exports = {
             colors: {
                 gray: colors.gray,
                 slate: colors.slate,
-                'dark': '#3c4858',
-                'black': '#161c2d',
+                dark: '#3c4858',
+                black: '#161c2d',
                 'dark-footer': '#192132',
-                'test': '#111000'
+                test: '#111000',
+                white: {
+                    DEFAULT: '#ffffff', // Full opacity
+                    5: 'rgba(255, 255, 255, 0.05)', // 5% opacity
+                    10: 'rgba(255, 255, 255, 0.1)', // 10% opacity
+                    20: 'rgba(255, 255, 255, 0.2)', // 20% opacity
+                    50: 'rgba(255, 255, 255, 0.5)', // 50% opacity
+                    80: 'rgba(255, 255, 255, 0.8)', // 80% opacity
+                },
             },
 
             boxShadow: {
@@ -81,7 +89,7 @@ module.exports = {
 
     plugins: [
         require("@tailwindcss/forms")({
-          strategy: 'class', // only generate classes
+            strategy: 'class', // only generate classes
         }),
     ],
 }

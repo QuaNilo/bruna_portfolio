@@ -26,8 +26,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
         <link href="../assets/libs/@iconscout/unicons/css/line.css" type="text/css" rel="stylesheet">
         <link href="../assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="../assets/css/custom.css">
         <link rel="stylesheet" href="../assets/css/tailwind.css">
-
     </head>
     
     <body class="font-nunito text-base text-black dark:text-white dark:bg-slate-900">
@@ -46,13 +46,14 @@
 <!-- Start Home -->
 <section class="relative flex md:h-screen h-screen py-44 items-center bg-cover bg-center">
     <div class="absolute inset-0 h-screen w-full jarallax" data-jarallax data-speed="0.5" style="background: url('../assets/images/home/CAPA_I.jpg') center; background-size: cover;"></div>
-    <div class="absolute inset-0 bg-gradient-to-t to-transparent via-transparent from-slate-900 hidden dark:block"></div>
-    <div class="absolute inset-0 bg-gradient-to-t to-transparent via-transparent from-white dark:hidden block"></div>
+<!--     <div class="absolute inset-0 bg-gradient-to-t to-transparent via-transparent from-slate-900 hidden dark:block"></div>
+    <div class="absolute inset-0 bg-gradient-to-t to-transparent via-transparent from-white dark:hidden block"></div> -->
+    <div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; height: 100%; width: 100%; background: linear-gradient(to top, white, rgba(255, 255, 255, 0.01), transparent);"></div>
 
     <!-- Content Wrapper -->
     <div class="absolute text-center p-6 bottom-0 start-0 end-0">
         <h3 style="font-family: 'PT Sans', sans-serif;" class="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-bold">BEM-VINDOS À MINHA ARTE</h3>
-        <p style="font-family: 'Antic Slab', serif;" class="text-sm font-semibold text-black max-w-2xl mx-auto">FOTOGRAFIA DOCUMENTAL, ESPONTÂNEA E INTEMPORAL</p>
+        <p style="font-family: 'Antic Slab', serif;" class="font-semibold text-black max-w-2xl mx-auto responsive-text">FOTOGRAFIA DOCUMENTAL, ESPONTÂNEA E INTEMPORAL</p>
     </div>
 </section><!--end section-->
 <!-- End Home -->
