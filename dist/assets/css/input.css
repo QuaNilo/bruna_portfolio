@@ -4805,7 +4805,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
   }
   :is(.dark #topnav .navigation-menu > li .submenu li a){
     --tw-text-opacity: 1;
-    color: rgb(0 0 0 / var(--tw-text-opacity));
+    color: rgb(255 255 255 / var(--tw-text-opacity));
   }
   #topnav .navigation-menu > li .submenu li a:hover{
     --tw-text-opacity: 1 !important;
@@ -4906,11 +4906,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
   }
   #topnav .navigation-menu.nav-light > li:hover > .menu-arrow{
     --tw-border-opacity: 1 !important;
-    border-color: rgb(0 0 0 / var(--tw-border-opacity)) !important;
+    border-color: rgb(255 255 255 / var(--tw-border-opacity)) !important;
   }
   #topnav .navigation-menu.nav-light > li:hover > a{
     --tw-text-opacity: 1 !important;
-    color: rgb(0 0 0 / var(--tw-text-opacity)) !important;
+    color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
   }
   #topnav .navigation-menu.nav-light .has-submenu .menu-arrow{
     border-color: rgb(255 255 255 / 0.5);
